@@ -122,14 +122,13 @@
 
 ## Outline
 
-- https://github.com/cncf/curriculum/blob/master/CKA_Curriculum_v1.23.pdf
-
+- https://github.com/cncf/curriculum/blob/master/CKA_Curriculum_v1.30.pdf
 
 ## Software / Environment
 
-> As of 05/2022
+> As of 08/2024
 
-- Kubernetes version: 1.23
+- Kubernetes version: 1.30
 - Ubuntu 20.04
 - Terminal
     - Bash
