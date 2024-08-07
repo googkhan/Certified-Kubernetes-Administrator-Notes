@@ -402,7 +402,7 @@ Perform these steps on both control and worker nodes.
     - `sudo apt-get update`
     - `sudo apt-get install -y apt-transport-https ca-certificates curl`
 
-- Add Google Cloud public signing key to `apt` for the Kubernetes repository
+- Add Kubernetes Community Repository public signing key to `apt` for the Kubernetes repository
     - `curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg`
 
 - Setup the Kubernetes repository entry in `apt`
@@ -416,7 +416,7 @@ Perform these steps on both control and worker nodes.
 - Install Kubernetes tools `(note the version)`
     - List of Kubernetes versions: https://kubernetes.io/releases/
     - `sudo apt-get install -y kubelet=1.30.2-1.1 kubeadm=1.30.2-1.1 kubectl=1.30.2-1.1`
-    - Note: To install latest versions, omit the verison specifier (ie. `kubelet` without the `=1.23.0.00`)
+    - Note: To install latest versions, omit the verison specifier (ie. `kubelet` without the `=1.30.2-1.1`)
 
 - Prevent automatic updating of Kubernetes packages for more control
     - `sudo apt-mark hold kubelet kubeadm kubectl`
@@ -432,7 +432,7 @@ Perform these steps on the control node.
 - Initialize the cluster
     - `sudo kubeadm init`
     - Can specify the IP [CIDR range](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing): `--pod-network-cidr 192.168.0.0/16`
-    - Can specify k8s version: `--kubernetes-version 1.23.0`
+    - Can specify k8s version: `--kubernetes-version 1.30.2`
     - Running this will provide a set of commands for further setup
 
 - From the previous command output, run the following. This commmand is to make `kubectl` work
